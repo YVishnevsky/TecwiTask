@@ -18,14 +18,14 @@ namespace Tecwi1.Repositories
 
         public async Task<int> GetCountAsync(string searchText = null)
         {
-            var query = GetFilteredQueriable(_dbContext.Employees, searchText);
+            var query = GetFilteredQueryable(_dbContext.Employees, searchText);
 
             return await query.CountAsync().ConfigureAwait(false);
         }
 
         public async Task<IEnumerable<Employee>> GetListAsync(int from, int count, string searchText, IEnumerable<(string fieldName, string direction)> sortFields)
         {
-            var query = GetFilteredQueriable(_dbContext.Employees.AsNoTracking(), searchText);
+            var query = GetFilteredQueryable(_dbContext.Employees.AsNoTracking(), searchText);
 
             return await query.Order(sortFields).Skip(from).Take(count).ToListAsync().ConfigureAwait(false);
         }
@@ -39,7 +39,7 @@ namespace Tecwi1.Repositories
             await _dbContext.SaveChangesAsync().ConfigureAwait(false);
         }
 
-        private IQueryable<Employee> GetFilteredQueriable(IQueryable<Employee> query, string searchText)
+        private IQueryable<Employee> GetFilteredQueryable(IQueryable<Employee> query, string searchText)
         {
             if (!string.IsNullOrEmpty(searchText))
             {
