@@ -1,7 +1,7 @@
 ## TecwiTask
 
 ### Requirements:
-.NET Framework 4.7
+.NET Framework 4.7, SQL Server
 
 ### How-to Run
 - Open solution in Visual Studio
