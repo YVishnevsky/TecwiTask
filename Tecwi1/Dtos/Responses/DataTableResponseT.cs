@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using Tecwi1.Requests;
 
-namespace Tecwi1.Responses
+namespace Tecwi1.Dtos.Responses
 {
     public abstract class DataTableResponse<T> where T : EmployeeDto
     {

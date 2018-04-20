@@ -1,4 +1,4 @@
-﻿namespace Tecwi1.Requests
+﻿namespace Tecwi1.Dtos.Requests
 {
     public class ColumnRequestItem
     {

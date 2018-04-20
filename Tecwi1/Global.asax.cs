@@ -5,12 +5,12 @@ using System.Web.Routing;
 using System.Web.Http;
 using AutoMapper;
 using Tecwi1.Models;
-using Tecwi1.Requests;
 using Autofac;
 using System.Reflection;
 using Autofac.Integration.WebApi;
 using Tecwi1.Repositories;
 using Autofac.Integration.Mvc;
+using Tecwi1.Dtos;
 
 namespace Tecwi1
 {
@@ -21,9 +21,7 @@ namespace Tecwi1
             Mapper.Initialize(cfg =>
             {
                 cfg.CreateMap<Employee, EmployeeDto>()
-                //.ForMember(m => m.StartDate, opt => opt.MapFrom(f => f.StartDate.ToShortDateString()))
                 .ReverseMap();
-                //.ForMember(m => m.StartDate, opt => opt.MapFrom(f => Convert.ToDateTime(f.StartDate)));
             });
 
             var builder = new ContainerBuilder();

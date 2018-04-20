@@ -1,17 +1,13 @@
 ﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Tecwi1.Models;
+using Tecwi1.Dtos;
+using Tecwi1.Dtos.Requests;
+using Tecwi1.Dtos.Responses;
 using Tecwi1.Repositories;
-using Tecwi1.Requests;
-using Tecwi1.Responses;
 
 namespace Tecwi1.Controllers
 {

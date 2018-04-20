@@ -166,13 +166,13 @@
     <Compile Include="Repositories\EmployeeRepository.cs" />
     <Compile Include="Repositories\Helpers.cs" />
     <Compile Include="Repositories\IEmployeeRepository.cs" />
-    <Compile Include="Requests\ColumnRequestItem.cs" />
-    <Compile Include="Requests\OrderRequestItem.cs" />
-    <Compile Include="Requests\EmployeeDto.cs" />
-    <Compile Include="Requests\DataTableRequest.cs" />
-    <Compile Include="Requests\SearchRequestItem.cs" />
-    <Compile Include="Responses\DataTableResponseT.cs" />
-    <Compile Include="Responses\EmployeesResponse.cs" />
+    <Compile Include="Dtos\Requests\ColumnRequestItem.cs" />
+    <Compile Include="Dtos\Requests\OrderRequestItem.cs" />
+    <Compile Include="Dtos\EmployeeDto.cs" />
+    <Compile Include="Dtos\Requests\DataTableRequest.cs" />
+    <Compile Include="Dtos\Requests\SearchRequestItem.cs" />
+    <Compile Include="Dtos\Responses\DataTableResponseT.cs" />
+    <Compile Include="Dtos\Responses\EmployeesResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

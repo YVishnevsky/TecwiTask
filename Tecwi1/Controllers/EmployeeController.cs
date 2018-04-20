@@ -2,9 +2,9 @@
 using System;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using Tecwi1.Dtos;
 using Tecwi1.Models;
 using Tecwi1.Repositories;
-using Tecwi1.Requests;
 
 namespace Tecwi1.Controllers
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Tecwi1.Requests
+namespace Tecwi1.Dtos
 {
     public class EmployeeDto 
     {
