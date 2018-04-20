@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 using Tecwi1.Models;
 using Tecwi1.Repositories;
@@ -18,7 +15,6 @@ namespace Tecwi1.Controllers
         public EmployeeController(IEmployeeRepository employeeRepository) => 
             _employeeRepository = employeeRepository ?? throw new ArgumentNullException(nameof(employeeRepository));
 
-        // GET: Home
         public ActionResult Index()
         {
             return View();
