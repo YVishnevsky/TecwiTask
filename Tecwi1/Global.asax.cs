@@ -21,9 +21,9 @@ namespace Tecwi1
             Mapper.Initialize(cfg =>
             {
                 cfg.CreateMap<Employee, EmployeeDto>()
-                .ForMember(m => m.StartDate, opt => opt.MapFrom(f => f.StartDate.ToShortDateString()))
-                .ReverseMap()
-                .ForMember(m => m.StartDate, opt => opt.MapFrom(f => Convert.ToDateTime(f.StartDate)));
+                //.ForMember(m => m.StartDate, opt => opt.MapFrom(f => f.StartDate.ToShortDateString()))
+                .ReverseMap();
+                //.ForMember(m => m.StartDate, opt => opt.MapFrom(f => Convert.ToDateTime(f.StartDate)));
             });
 
             var builder = new ContainerBuilder();

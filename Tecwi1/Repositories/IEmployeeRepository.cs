@@ -9,7 +9,7 @@ namespace Tecwi1.Repositories
         Task<IEnumerable<Employee>> GetListAsync(int from, int count, string searchText, IEnumerable<(string fieldName, string direction)> sortFields);
         Task<int> GetCountAsync(string searchText = null);
         Task<Employee> GetAsync(int id);
-
+        Task AddNewAsync(Employee employee);
         Task UpdateAsync(Employee employee);
         Task DeleteAsync(int id);
     }

@@ -64,5 +64,12 @@ namespace Tecwi1.Repositories
 
             await _dbContext.SaveChangesAsync().ConfigureAwait(false);
         }
+
+        public async Task AddNewAsync(Employee employee)
+        {
+            _dbContext.Employees.Add(employee);
+
+            await _dbContext.SaveChangesAsync().ConfigureAwait(false);
+        }
     }
 }

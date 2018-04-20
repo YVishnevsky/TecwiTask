@@ -8,9 +8,8 @@
 <table class="display" id="example" style="width:100%"
        data-list-url=@Url.RouteUrl("DefaultApi", new { httproute = "", controller = "employees" })
        data-del-url=@Url.RouteUrl("DefaultApi", new { httproute = "", controller = "employees" })
-       data-edit-url=@Url.Action("Edit")
-       data-new-url=@Url.Action("New")
-       >
+       data-edit-url=@Url.Action("edit")
+       data-new-url=@Url.Action("new")>
     <thead>
         <tr>
             <th>Id</th>
@@ -34,4 +33,7 @@
         </tr>
     </tfoot>
 </table>
+@Html.ActionLink("New Employee", "New", null, new { @class = "btn btn-info" })
+
+
 

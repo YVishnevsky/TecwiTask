@@ -1,15 +1,15 @@
 ﻿$(document).ready(function () {
     $('#example').DataTable({
+        "order": [[0, "desc"]],
         "processing": true,
         "serverSide": true,
         "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "All"]],
         "ajax":
             {
-                //url: "/api/employees",
                 url: $('#example').data('listUrl'),
                 accepts: {
                     json: "application/json"
-                },
+                }
             },
         "columnDefs":
             [{
@@ -21,7 +21,12 @@
             { "data": "id", "name": "Id", "autoWidth": true },
             { "data": "name", "name": "Name" },
             { "data": "position", "name": "Position" },
-            { "data": "startDate", "name": "StartDate" },
+            {
+                "data": "startDate", "name": "StartDate",
+                render: function (d) {
+                    return moment(d).format("DD.MM.YYYY");
+                }
+            },
             { "data": "age", "name": "Age" },
             {
                 "orderable": false,
